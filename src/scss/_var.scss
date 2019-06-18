@@ -1,0 +1,18 @@
+$i: !important;
+
+// Fonts  -------------------------------------------------------------------- /
+@import url('https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');
+
+// Colors  -------------------------------------------------------------------- /
+$color-gray: #b9c4c2;
+
+// Fonts -------------------------------------------------------------------- /
+$font-default: 'Nunito', sans-serif;
+$font-size-default: 14px;
+$font-color-default: $color-gray;
+
+// Media queries
+$break1: 1600px;
+$break2: 1200px;
+$break3: 768px;
+$break4: 550px;
