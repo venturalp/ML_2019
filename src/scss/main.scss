@@ -5,5 +5,9 @@
 @import '~bootstrap/scss/bootstrap.scss';
 @import 'base';
 
-@import './pages/home/home';
 @import './components/search-bar';
+@import './components/loading';
+@import './components/line-result';
+@import './pages/home/home';
+@import './pages/items/search-results';
+@import './pages/item/product-info';

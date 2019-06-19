@@ -31,6 +31,7 @@ router.get('/items', async (req, res) => {
       picture: p.thumbnail,
       condition: p.condition,
       free_shipping: p.shipping ? p.shipping.free_shipping : false,
+      state: p.address ? p.address.state_name : '',
     })
 
     return null
@@ -53,7 +54,7 @@ router.get('/items/:id', async (req, res) => {
   })
   const itemInfo = await responseItem.json()
 
-  if (itemInfo.status) {
+  if (itemInfo.status === 404) {
     res.send({
       status: itemInfo.status,
       message: itemInfo.message,

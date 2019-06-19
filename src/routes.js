@@ -1,5 +1,6 @@
 import Home from './pages/home'
 import Items from './pages/items'
+import Item from './pages/item'
 import Error404 from './pages/Error404'
 
 const routes = [
@@ -11,6 +12,11 @@ const routes = [
   {
     path: '/items',
     component: Items,
+    exact: true,
+  },
+  {
+    path: '/items/:id',
+    component: Item,
     exact: true,
   },
   {

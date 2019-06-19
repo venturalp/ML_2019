@@ -1,3 +1,5 @@
 export const SET_DIMENSION = 'SET_DIMENSION'
 export const SET_LOADING = 'SET_LOADING'
 export const SEARCH = 'SEARCH'
+export const GET_PRODUCT = 'GET_PRODUCT'
+export const CLEAR_DATA = 'CLEAR_DATA'

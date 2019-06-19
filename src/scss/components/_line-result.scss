@@ -1,0 +1,76 @@
+.line-result {
+  padding: 16px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  position: relative;
+  &:hover {
+    text-decoration: none;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 16px;
+    right: 16px;
+    border: 1px solid #f7f7f7;
+  }
+  &:last-child {
+    &:after {
+      display: none;
+    }
+  }
+  & > div {
+    .thumb {
+      width: 180px;
+      height: 180px;
+      border-radius: 4px;
+      overflow: hidden;
+      margin-right: 16px;
+      img {
+        width: 180px;
+        height: 180px;
+      }
+    }
+    &:last-child {
+      flex: 1;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      & > div {
+        &:first-child {
+          flex-basis: 400px;
+        }
+      }
+      h2,
+      h3 {
+        color: $color-dark;
+      }
+      .price {
+        margin-bottom: 32px;
+        h2 {
+          display: inline-block;
+          vertical-align: middle;
+          @include rem('font-size', 24px);
+          line-height: 1;
+          margin-right: 8px;
+          img {
+            display: inline-block;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      h3 {
+        @include rem('font-size', 18px);
+      }
+
+      .state {
+        color: $color-normal;
+        padding-right: 90px;
+        @include rem('font-size', 12px);
+      }
+    }
+  }
+}

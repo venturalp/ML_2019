@@ -5,27 +5,22 @@ import PropTypes from 'prop-types'
 
 class SearchBar extends Component {
 
-  state = {
-    searchText: '',
-  }
-
   keyDownEvent = (e) => {
     if (e.keyCode === 13) this.handleSearch()
   }
 
   onChangeSearch = (e) => {
-    this.setState({ searchText: e.currentTarget.value })
+    const { changeSearch } = this.props
+    changeSearch(e.currentTarget.value)
   }
 
   handleSearch = () => {
     const { doSearch } = this.props
-    const { searchText } = this.state
-
-    if (doSearch) doSearch(searchText)
+    if (doSearch) doSearch()
   }
 
   render() {
-    const { className } = this.props
+    const { className, searchText } = this.props
 
     return (
       <div className={`search-bar ${className || ''}`}>
@@ -40,6 +35,7 @@ class SearchBar extends Component {
                 placeholder="Nunca dejes de buscar"
                 onKeyDown={this.keyDownEvent}
                 onChange={this.onChangeSearch}
+                value={searchText}
               />
               <button type="button" onClick={this.handleSearch}>
                 <img src={searchIco} alt="Buscar" />
@@ -55,7 +51,9 @@ class SearchBar extends Component {
 
 SearchBar.propTypes = {
   doSearch: PropTypes.func,
+  changeSearch: PropTypes.func,
   className: PropTypes.string,
+  searchText: PropTypes.string,
 }
 
 export default SearchBar

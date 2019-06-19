@@ -86,7 +86,7 @@ export default {
             options: {
               name: '[name].[ext]',
               outputPath: 'img/',
-              publicPath: 'static/img',
+              publicPath: '/static/img',
             },
           },
         ],

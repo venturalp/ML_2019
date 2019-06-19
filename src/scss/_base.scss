@@ -11,6 +11,7 @@ body {
   height: 100%;
   line-height: 1.4;
   margin: 0;
+  background-color: $color-lighter;
 }
 h1,
 h2,
@@ -51,4 +52,10 @@ ul {
   @media screen and (max-width: $base-container - 50px) {
     max-width: 95%;
   }
+}
+.breadcrumb {
+  @include rem('font-size', 14px);
+  @include rem('line-height', 14px);
+  margin: 16px 0;
+  padding: 0;
 }

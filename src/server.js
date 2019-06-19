@@ -9,13 +9,13 @@ import htmlTemplate from './helpers/Template'
 import Helmet from 'react-helmet'
 import routes from './routes'
 import bodyParser from 'body-parser'
-import search from './api/items/search'
+import apiItems from './api/items'
 
 const app = express()
 app.use(bodyParser.json())
 
 app.use('/static', express.static(`${__dirname}`))
-app.use('/api', search)
+app.use('/api', apiItems)
 
 app.get('/*', (req, res) => {
   const context = {}
