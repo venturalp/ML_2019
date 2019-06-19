@@ -2,8 +2,10 @@
 
 ## Quick start
 
-First: run `npm i`
+First: run `npm i`'
+
 Next: `npm run start`
+
 and finally access: [Running application: http://locahost:9000 ](http://locahost:9000).
 
 ## Deploy
