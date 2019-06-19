@@ -2,7 +2,7 @@
 
 ## Quick start
 
-First: run `npm i`'
+First: run `npm i`
 
 Next: `npm run start`
 
