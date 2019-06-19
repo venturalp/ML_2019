@@ -1,7 +1,8 @@
-import { SET_DIMENSION, SET_LOADING } from '../../actions/general/types'
+import { SET_DIMENSION, SET_LOADING, SEARCH } from '../../actions/general/types'
 
 const INITIAL_STATE = {
   loading: false,
+  searchResult: {},
 }
 
 function general(state = INITIAL_STATE, action) {
@@ -15,6 +16,11 @@ function general(state = INITIAL_STATE, action) {
       return {
         ...state,
         loading: action.payload,
+      }
+    case SEARCH:
+      return {
+        ...state,
+        searchResult: action.payload,
       }
     default:
       return state

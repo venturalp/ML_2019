@@ -43,3 +43,12 @@ ul {
     list-style: none;
   }
 }
+
+.container-base {
+  width: $base-container;
+  margin: 0 auto;
+  position: relative;
+  @media screen and (max-width: $base-container - 50px) {
+    max-width: 95%;
+  }
+}

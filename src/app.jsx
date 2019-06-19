@@ -36,7 +36,6 @@ class App extends Component {
           {routes.map(route => (
             <Route key={route.path} {...route} />
           ))}
-          <Route component={Error404} />
         </Switch>
       </ScrollToTop>
     )

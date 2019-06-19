@@ -4,15 +4,13 @@ import fetch from 'isomorphic-fetch'
 
 export const search = searchQuery => async (dispatch) => {
   try {
-    const response = await fetch('', {
+    const response = await fetch(`/api/items?q=${searchQuery}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
       },
     })
-
     const result = await response.json()
-
     dispatch({
       type: SEARCH,
       payload: result,
