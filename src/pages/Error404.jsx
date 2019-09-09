@@ -8,7 +8,7 @@ class Error404 extends Component {
       <section className="sec-404">
         <article>
           <div>
-            <h1>404</h1>
+            <h1>404 Alterado</h1>
           </div>
         </article>
         <Helmet title="ML 2019 - Error 404">
