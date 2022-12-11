@@ -67,7 +67,7 @@
     "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "es6-promise": "^4.2.6",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "isomorphic-fetch": "^2.2.1",
     "load-json-file": "^6.0.0",
     "prop-types": "^15.7.2",
